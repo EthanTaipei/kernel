@@ -1,0 +1,23 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "qemu",
+            "type": "shell",
+            "command": "/usr/bin/qemu-system-i386 -m 512m -kernel linux-4.5.6/arch/x86/boot/bzImage -initrd rootfs.cpio.gz -S -s -append \"console=ttyS0 nokaslr\" -serial stdio -display none",
+            "presentation": {
+                "echo": true,
+                "clear": true,
+                "reveal": "always",
+                "showReuseMessage": false,
+                "group": "qemu"
+            },
+            "isBackground": true,
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}
