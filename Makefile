@@ -32,6 +32,7 @@ $(BUSYBOX_DIR):
 
 build:
 	make -C $(KERNEL_DIR) -j8
+	make -C $(BUSYBOX_DIR) -j8
 	make -C $(BUSYBOX_DIR) -j8 install
 
 mkrootfs:
